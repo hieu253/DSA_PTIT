@@ -1,27 +1,27 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-int n,a[i];
-void next(){
-	int i = n;
-	while(i >= 1 && a[i] == 1){
-		a[i] = 0;
+
+using ll = long long;
+
+void next(string s){
+	int i = s.size() - 1;
+	while(i >= 0 && s[i] == '1'){
+		s[i] = '0';
 		--i;
 	}
-	a[i] = 1;
-	for(int i = 1; i <= n; i++){
-		cout << a[i];
+	if(i != -1){
+		s[i] = '1';
 	}
-	cout  << endl;
+	cout << s << endl;
+
 }
-int main()
+int main(int argc, char const *argv[])
 {
 	int t; cin >> t;
 	while(t--){
-	cin >> n;
-
-	
-
-}
+		string s; cin >> s;
+		next(s);
+	}
 	return 0;
 }
